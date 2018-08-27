@@ -55,7 +55,7 @@ function mgsPackResponse(options) {
  */
 function shouldMsgPack(req) {
   let acceptType = req.get('accept');
-  return !_.isNil(acceptType) && acceptType === 'application/x-msgpack';
+  return !_.isNil(acceptType) && acceptType.indexOf('application/x-msgpack') > -1;
 }
 
 /**
